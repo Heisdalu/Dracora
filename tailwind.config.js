@@ -16,6 +16,10 @@ module.exports = {
       100: "100%",
     },
 
+    screens: {
+      md: "768px",
+    },
+
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -39,6 +43,10 @@ module.exports = {
         white: "#fff",
         red: "#DC2626",
         lightBlue: "#03C9D7",
+        mainBg: "#FAFBFB",
+      },
+      boxShadow: {
+        m1: "box-shadow: 0px 7px 30px 0px rgba(114, 122, 131, 0.11)",
       },
     },
   },

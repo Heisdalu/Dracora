@@ -2,4 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .centerPos {
+    @apply flex justify-center items-center;
+  }
 
+  .navigateModal::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .navigateModal::-webkit-scrollbar-thumb {
+    background: #d8d8d8;
+    border-radius: 40px;
+}
+
+  .message::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    top: 8px;
+    right: 10px;
+    background-color: #03c9d7;
+  }
+
+  .notification::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    top: 8px;
+    right: 10px;
+    background-color: #fec90f;
+  }
+}

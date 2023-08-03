@@ -10,7 +10,7 @@ type NavigateHeaderProps = {
 const NavigateHeader: React.FC<NavigateHeaderProps> = ({ title, elements }) => {
   return (
     <aside className="flex flex-col space-y-[10px]">
-      <h1 className="font-[400] text-16px mr-auto text-navModalHeader">
+      <h1 className="font-[400] text-16px mr-auto text-navModalHeader uppercase">
         {title}
       </h1>
 
