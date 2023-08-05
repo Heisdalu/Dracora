@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, SyntheticEvent, useEffect } from "react";
+import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 import NavigateHeader from "./NavigateHeader";
 import { pages, apps, charts } from "@/constants/Modal";
@@ -10,22 +10,7 @@ interface NavigateModalProps {
 const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
   const dashboard = [{ icon: "/navIcon/ecommerce.svg", name: "ecommerce" }];
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    function handleMediaQueryChange(event: { matches: any; }) {
-      if (event.matches) {
-        // This code will execute when the screen size matches the media query
-        console.log("Screen size is less than or equal to 768px");
-      } else {
-        // This code will execute when the screen size does not match the media query
-        console.log("Screen size is greater than 768px");
-      }
-    }
-    console.log(mediaQuery);
-
-    mediaQuery.addEventListener("load", handleMediaQueryChange);
-  }, []);
+  
 
   return (
     <>
