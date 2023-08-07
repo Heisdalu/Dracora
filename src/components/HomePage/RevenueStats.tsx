@@ -74,7 +74,7 @@ const RevenueStats: React.FC<Props> = ({ active }) => {
           </div>
 
           <div
-            className={` ${active ? "vlg:pl-[2rem]" : "vlg:pl-[6rem]"}`}
+            className={` ${active ? "vlg:pl-[2rem]" : "md:pl-[5rem]"}`}
           >
             <StackedBarChart />
           </div>
