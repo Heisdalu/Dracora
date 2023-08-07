@@ -1,5 +1,11 @@
+import { stateTypes } from "@/constants/Modal";
 import React, { createContext } from "react";
 
-const Context = createContext({});
+const initial: stateTypes = {
+  activeModal: false,
+  toggleModal: () => {},
+};
+
+const Context = createContext(initial);
 
 export default Context;

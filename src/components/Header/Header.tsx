@@ -7,13 +7,16 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ toggle }) => {
-  
+  const toggleModal = () => {
+    toggle(false);
+  };
+
   return (
     <div className="bg-mainBg border-1 py-[8px] sticky top-[0rem] mb-[2rem] md:relative md:top[0] md:mt-1 md:py-[0]">
       <header>
         <nav className="flex">
           <button
-            onClick={toggle}
+            onClick={toggleModal}
             aria-label="hamburger"
             className="p-0.75 bg-[#F7F7F7] rounded-[50%]"
           >

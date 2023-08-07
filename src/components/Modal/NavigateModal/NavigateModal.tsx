@@ -9,8 +9,11 @@ interface NavigateModalProps {
 
 const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
   const dashboard = [{ icon: "/navIcon/ecommerce.svg", name: "ecommerce" }];
-
   
+
+  const toggleModal = () => {
+    toggle(false);
+  };
 
   return (
     <>
@@ -30,7 +33,7 @@ const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
             </h1>
 
             <span
-              onClick={toggle}
+              onClick={toggleModal}
               className="ml-[auto] flex items-center justify-center md:hidden"
             >
               <Image src="/navIcon/exit.svg" width={20} height={20} alt="" />

@@ -20,3 +20,13 @@ export const charts = [
   { icon: "/navIcon/scatter.svg", name: "scatter" },
   { icon: "/navIcon/pyramid.svg", name: "pyramid" },
 ];
+
+
+export enum DataConstant {
+  MODAL = "MODAL",
+}
+
+export interface stateTypes {
+  activeModal: boolean;
+  toggleModal: Function;
+}

@@ -1,10 +1,7 @@
 import { useReducer, ReactNode } from "react";
 import Context from "./Context";
+import { DataConstant, stateTypes } from "@/constants/Modal";
 
-interface stateTypes {
-  activeModal: boolean;
-  toggleModal: Function;
-}
 type Props = {
   children: ReactNode;
 };
@@ -13,10 +10,6 @@ const initial: stateTypes = {
   activeModal: false,
   toggleModal: () => {},
 };
-
-enum DataConstant {
-  MODAL = "MODAL",
-}
 
 interface actionTypes {
   type: string;
@@ -27,7 +20,7 @@ const dataReducer = (state: stateTypes, action: actionTypes) => {
   if (action.type === DataConstant.MODAL) {
     return {
       ...state,
-      activeModal: action.state ? true : !state.activeModal
+      activeModal: action.state ? true : !state.activeModal,
     };
   }
 
@@ -38,6 +31,8 @@ const Provider = ({ children }: Props) => {
   const [dataState, dispatch] = useReducer(dataReducer, initial);
 
   const toggleModalState = (state = false) => {
+    console.log(state);
+
     dispatch({ type: DataConstant.MODAL, state: state });
   };
 

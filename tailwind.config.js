@@ -19,9 +19,9 @@ module.exports = {
 
     screens: {
       md: "768px",
-      s4m: '470px',
-      lg: '1000px',
-      vlg: '1240px'
+      s4m: "470px",
+      lg: "1000px",
+      vlg: "1240px",
     },
 
     extend: {
@@ -48,12 +48,14 @@ module.exports = {
         navModalHeader: "#9CA3AF",
         navModalText: "#374151",
         white: "#fff",
-        green: '#16A34A',
+        green: "#16A34A",
         red: "#DC2626",
         lightBlue: "#03C9D7",
-        yellow: '#FEC90F',
+        yellow: "#FEC90F",
         mainBg: "#FAFBFB",
         mdHidden: "#00000080",
+        exDark: "#4B5563",
+        exGreen: "#4ADE80",
       },
       boxShadow: {
         m1: "box-shadow: 0px 7px 30px 0px rgba(114, 122, 131, 0.11)",
