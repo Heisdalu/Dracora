@@ -1,20 +1,18 @@
 import React from "react";
-import BudgetChart from "./BudgetChart";
-import StackedBarChart from "./StackedBarChart";
-import BlueBarChart from "./BlueBarChart";
-import SalesPieChart from "./SalesPieChart";
+import BudgetChart from "./Charts/BudgetChart";
+import StackedBarChart from "./Charts/StackedBarChart";
+import BlueBarChart from "./Charts/BlueBarChart";
+import SalesPieChart from "./Charts/SalesPieChart";
 
 interface Props {
   active: boolean;
 }
 
 const RevenueStats: React.FC<Props> = ({ active }) => {
- 
-
   return (
     <section
       className={`border-1 mt-0.75 flex flex-col space-y-[3.25rem] vlg:grid vlg:[grid-template-columns:2fr_1fr] vlg:space-y-[0] ${
-        active ? "vlg:space-x-[3rem]" : "vlg:space-x-[0]"
+        active ? "vlg:space-x-[3.25rem]" : "vlg:space-x-[0]"
       }`}
     >
       <div className=" bg-white rounded-[16px] flex flex-col space-y-[2.5rem] p-1 md:max-w-[760px] md:w-100 md:mx-auto vlg:mx-[0] vlg:ml-1">
@@ -39,7 +37,11 @@ const RevenueStats: React.FC<Props> = ({ active }) => {
         <div
           className={`flex flex-col space-y-[3.5rem] ${"md:grid md:grid-cols-2  md:space-y-[0] md:space-x-[0rem]"}`}
         >
-          <div className={"border-r-1 border-r-[#0000001a] pr-2"}>
+          <div
+            className={
+              "border-r-1 border-r-[#0000001a] pr-2 s4m:max-w-[400px] s4m:mx-auto w-[100%] md:s4m:max-w-[auto] md:mx-[0] "
+            }
+          >
             <div className="flex items-center space-x-1">
               <h1 className="flex flex-col">
                 <span className="text-[1.875rem] font-[600] text-black">
@@ -73,15 +75,13 @@ const RevenueStats: React.FC<Props> = ({ active }) => {
             </div>
           </div>
 
-          <div
-            className={` ${active ? "vlg:pl-[2rem]" : "md:pl-[5rem]"}`}
-          >
+          <div className={` ${active ? "vlg:pl-[2rem]" : "md:pl-[5rem]"}`}>
             <StackedBarChart />
           </div>
         </div>
       </div>
 
-      <div className=" p-0.75 flex flex-col space-y-0.75  md:max-w-[500px] md:mx-auto vlg:mx-[0] vlg:max-w-[500px] vlg:pt-[0] vlg:pl-[0]">
+      <div className=" p-0.75 flex flex-col space-y-0.75  s4m::max-w-[500px] s4m:mx-auto vlg:mx-[0] vlg:max-w-[500px] vlg:pt-[0] vlg:pl-[0]">
         <div className=" p-1 space-y-1 bg-lightBlue rounded-[16px] vlg:space-y-[0]">
           <div className="flex">
             <h1 className="text-white text-24px font-[600]">Earnings</h1>

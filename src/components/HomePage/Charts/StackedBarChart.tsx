@@ -66,8 +66,8 @@ const StackedBarChart = () => {
   };
 
   return (
-    <div className=" borde-1 w-[100%] h-[100%] vlg:h-[360px] vlg:w-[100%]">
-      <Bar options={options} data={data} width="100%"/>
+    <div className="s4m:mx-auto w-[100%] s4m:max-w-[400px] s4m:centerPos h-[100%] vlg:h-[360px] vlg:w-[100%] md:mx-[0] md:max-w-[auto]">
+      <Bar options={options} data={data} width="100%" />
     </div>
   );
 };
