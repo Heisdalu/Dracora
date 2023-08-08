@@ -38,7 +38,7 @@ const StackedBarChart = () => {
           display: false,
         },
         grid: {
-          display: false,
+          display: true,
         },
         ticks: {
           color: "#686868",

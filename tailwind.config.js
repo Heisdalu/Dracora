@@ -56,6 +56,8 @@ module.exports = {
         mdHidden: "#00000080",
         exDark: "#4B5563",
         exGreen: "#4ADE80",
+        pink: "#FFF4E5",
+        lgBlack: "#0000001a",
       },
       boxShadow: {
         m1: "box-shadow: 0px 7px 30px 0px rgba(114, 122, 131, 0.11)",
