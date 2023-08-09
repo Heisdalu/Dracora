@@ -66,7 +66,7 @@ export default function Home() {
                 <h1 className="mr-1 break-words font-[600] text-black text-20px">
                   Sales Overview
                 </h1>
-                <div className="rounded-[6px] ml-auto p-[9px] centerPos border-[#0000001a]">
+                <div className="rounded-[6px] ml-auto p-[9px] border-1 centerPos border-[#0000001a]">
                   <select name="date" id="date" className="outline-none">
                     <option value="May 2021">May 2021</option>
                     <option value="May 2021">Jun 2021</option>

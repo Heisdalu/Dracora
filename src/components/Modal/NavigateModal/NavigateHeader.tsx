@@ -18,20 +18,21 @@ const NavigateHeader: React.FC<NavigateHeaderProps> = ({ title, elements }) => {
       </h1>
 
       <div className="flex flex-col space-y-[7px]">
-        {elements.map((el, i) => (
+       
+        {elements.map(({icon, name}, i) => (
           <div key={i}>
             <Link
-              href={`/${el.name == "ecommerce" ? "" : el.name}`}
+              href={`/${name == "ecommerce" ? "" : name}`}
               className={`text-navModalText py-0.75 px-[12px] rounded-[8px] flex space-x-20 items-center ${
-                router.pathname === el.name ||
-                (router.pathname === "/" && el.name === "ecommerce")
+                router.pathname === name ||
+                (router.pathname === "/" && name === "ecommerce")
                   ? "bg-lightBlue text-white"
                   : ""
-              }`}
+              } hover:bg-lgBlack`}
             >
-              <span>{el.icon}</span>
+              <span>{icon}</span>
               <span className="capitalize text-16px font-[400] b">
-                {el.name}
+                {name}
               </span>
             </Link>
           </div>

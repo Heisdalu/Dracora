@@ -2,7 +2,6 @@ import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 import NavigateHeader from "./NavigateHeader";
 import { dashboard, pages, apps, charts } from "@/constants/Modal";
-import { EcommerceIcon } from "@/components/NavigateIcon";
 
 interface NavigateModalProps {
   toggle: MouseEventHandler<HTMLButtonElement | HTMLDivElement>;
