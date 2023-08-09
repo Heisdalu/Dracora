@@ -90,7 +90,7 @@ const SalesOverviewChart: FC<Props> = ({active}) => {
     },
   };
   return (
-    <div className={`w-100 ${active ? '' : 'vlg:mt-[4rem]'}`}>
+    <div className={`border-1 ${active ? '' : 'vlg:mt-[4rem]'}`}>
       <Line options={options} data={data} />
     </div>
   );

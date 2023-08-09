@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,7 +20,12 @@ ChartJS.register(
   Tooltip
 );
 
-const BudgetChart = () => {
+interface BudgetChartProps {
+  dataArr?: number[];
+  color?: string;
+}
+
+const BudgetChart: FC<BudgetChartProps> = ({ dataArr, color }) => {
   const labels = ["Jan", "Feb", "Mar", "Apr", "Jun"];
 
   const data = {
@@ -28,8 +33,10 @@ const BudgetChart = () => {
     datasets: [
       {
         label: "Budgets",
-        data: [9500, 12000, 27670, 24000, 40000],
-        backgroundColor: "#03C9D7",
+        data: dataArr ? dataArr : [9500, 12000, 27670, 24000, 40000],
+        backgroundColor: "#fff",
+        borderColor: color ? color : "#03C9D7",
+        pointBorderWidth: 2,
       },
     ],
   };
@@ -41,6 +48,7 @@ const BudgetChart = () => {
         display: false,
       },
     },
+
     scales: {
       x: {
         display: false,
@@ -66,3 +74,9 @@ const BudgetChart = () => {
   );
 };
 export default BudgetChart;
+
+// elements: {
+//       point: {
+//         pointBorderWidth: 10,
+//       },
+//     },

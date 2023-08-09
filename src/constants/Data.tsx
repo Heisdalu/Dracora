@@ -1,11 +1,13 @@
-export const transactionData: {
+type ListTypes = {
   path: string;
-  pathColor: "blue" | "yellow" | "pink";
+  pathColor: string;
   title: string;
   subTitle: string;
   isRed: boolean;
   price: number;
-}[] = [
+}[];
+
+export const transactionData: ListTypes = [
   {
     path: "/transactIcon/Dollar.svg",
     pathColor: "blue",
@@ -46,4 +48,39 @@ export const transactionData: {
     isRed: true,
     price: 90,
   },
+];
+
+export const weeklyList: ListTypes = [
+  {
+    path: "/weekly/sales.svg",
+    pathColor: "darkPink",
+    title: "Top Sales",
+    subTitle: "Jospeh Doyin",
+    isRed: false,
+    price: 750,
+  },
+  {
+    path: "/weekly/star.svg",
+    pathColor: "yellow",
+    title: "Best Seller",
+    subTitle: "Williams Chukwuma",
+    isRed: false,
+    price: 490,
+  },
+  {
+    path: "/weekly/chat.svg",
+    pathColor: "green",
+    title: "Top Loss",
+    subTitle: "Adewale Ajayi",
+    isRed: true,
+    price: 890,
+  },
+];
+
+export const LeaderIcons = [
+  { path: "/headerIcon/divineAvi.jpg" },
+  { path: "/Leader/av1.jpg" },
+  { path: "/Leader/av2.jpg" },
+  { path: "/Leader/av3.jpg" },
+  { path: "/Leader/av4.jpg" },
 ];

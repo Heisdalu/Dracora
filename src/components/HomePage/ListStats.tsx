@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 type ListItem = {
   path: string;
-  pathColor: "blue" | "yellow" | "pink";
+  pathColor: string;
   title: string;
   subTitle: string;
   isRed: boolean;
@@ -30,7 +30,11 @@ const ListStats: FC<ListProps> = ({ data }) => {
                 ? "bg-yellow"
                 : el.pathColor === "pink"
                 ? "bg-pink"
-                : "bg-[#E5FAFB]"
+                : el.pathColor === "blue"
+                ? "bg-[#E5FAFB]"
+                : el.pathColor === "green"
+                ? "bg-[#00C292]"
+                : "bg-[#FB9678]"
             }`}
           >
             <Image src={el.path} width={15} height={24} alt="" />

@@ -11,7 +11,12 @@
     width: 6px;
   }
 
-  .navigateModal::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  .navigateModal::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb {
     background: #d8d8d8;
     border-radius: 40px;
   }
