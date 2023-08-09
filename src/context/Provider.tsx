@@ -1,14 +1,9 @@
 import { useReducer, ReactNode } from "react";
 import Context from "./Context";
-import { DataConstant, stateTypes } from "@/constants/Modal";
+import { DataConstant, stateTypes, initial } from "@/constants/Modal";
 
 type Props = {
   children: ReactNode;
-};
-
-const initial: stateTypes = {
-  activeModal: false,
-  toggleModal: () => {},
 };
 
 interface actionTypes {
@@ -24,6 +19,13 @@ const dataReducer = (state: stateTypes, action: actionTypes) => {
     };
   }
 
+  if (action.type === DataConstant.CHECK_SCREEN) {
+    return {
+      ...state,
+      isMobileScreen: true,
+    };
+  }
+
   return state;
 };
 
@@ -32,13 +34,17 @@ const Provider = ({ children }: Props) => {
 
   const toggleModalState = (state = false) => {
     console.log(state);
-
     dispatch({ type: DataConstant.MODAL, state: state });
+  };
+
+  const checkMobileScreen = () => {
+    dispatch({ type: DataConstant.CHECK_SCREEN });
   };
 
   const valueState: stateTypes = {
     ...dataState,
     toggleModal: toggleModalState,
+    isMobileFunc: checkMobileScreen,
   };
 
   return <Context.Provider value={valueState}>{children}</Context.Provider>;

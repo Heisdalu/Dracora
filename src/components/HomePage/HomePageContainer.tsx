@@ -13,16 +13,6 @@ const HomePageContainer: React.FC<HomePageContainerProps> = ({ children }) => {
   // const [active, setActive] = useState(false);
   const ctx: stateTypes = useContext(Context);
 
-  console.log(ctx);
-
-  // const toggleActive = (): void => {
-  //   setActive((prev) => !prev);
-  // };
-
-  // const activateToggle = (): void => {
-  //   setActive(true);
-  // };
-
   useEffect(() => {
     const mediaQuery: MediaQueryList = window.matchMedia("(min-width: 768px)");
 
@@ -31,6 +21,7 @@ const HomePageContainer: React.FC<HomePageContainerProps> = ({ children }) => {
         // This code will execute when the screen size matches the media query
         // activateToggle();
         ctx.toggleModal(true);
+        ctx.isMobileFunc();
       }
     }
     handleMediaQuery();

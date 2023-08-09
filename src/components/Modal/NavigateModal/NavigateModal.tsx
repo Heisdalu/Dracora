@@ -4,12 +4,10 @@ import NavigateHeader from "./NavigateHeader";
 import { dashboard, pages, apps, charts } from "@/constants/Modal";
 
 interface NavigateModalProps {
-  toggle: MouseEventHandler<HTMLButtonElement | HTMLDivElement>;
+  toggle: Function;
 }
 
 const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
-  
-
   const toggleModal = () => {
     toggle(false);
   };
@@ -48,7 +46,7 @@ const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
         </nav>
       </div>
       <div
-        onClick={toggle}
+        onClick={toggleModal}
         className="fixed top-[0] h-[100vh] w-100 bg-mdHidden z-[1] md:hidden"
       ></div>
     </>

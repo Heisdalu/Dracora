@@ -15,7 +15,6 @@ type ListProps = {
 };
 
 const ListStats: FC<ListProps> = ({ data }) => {
-  console.log(data);
 
   return (
     <div className=" flex flex-col space-y-1">

@@ -39,9 +39,19 @@ export const charts = [
 
 export enum DataConstant {
   MODAL = "MODAL",
+  CHECK_SCREEN = "CHECK_SCREEN",
 }
 
 export interface stateTypes {
   activeModal: boolean;
+  isMobileScreen: boolean;
+  isMobileFunc: Function;
   toggleModal: Function;
 }
+
+export const initial: stateTypes = {
+  activeModal: false,
+  isMobileScreen: false,
+  isMobileFunc: () => {},
+  toggleModal: () => {},
+};

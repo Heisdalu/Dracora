@@ -3,7 +3,7 @@ import React, { MouseEventHandler } from "react";
 import MainNavigation from "./MainNavigation";
 
 interface HeaderProps {
-  toggle: MouseEventHandler<HTMLButtonElement>;
+  toggle: Function;
 }
 
 const Header: React.FC<HeaderProps> = ({ toggle }) => {
