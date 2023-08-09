@@ -1,14 +1,14 @@
 import React, { MouseEventHandler } from "react";
 import Image from "next/image";
 import NavigateHeader from "./NavigateHeader";
-import { pages, apps, charts } from "@/constants/Modal";
+import { dashboard, pages, apps, charts } from "@/constants/Modal";
+import { EcommerceIcon } from "@/components/NavigateIcon";
 
 interface NavigateModalProps {
   toggle: MouseEventHandler<HTMLButtonElement | HTMLDivElement>;
 }
 
 const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
-  const dashboard = [{ icon: "/navIcon/ecommerce.svg", name: "ecommerce" }];
   
 
   const toggleModal = () => {
@@ -44,7 +44,6 @@ const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
             <NavigateHeader title="dashboard" elements={dashboard} />
             <NavigateHeader title="pages" elements={pages} />
             <NavigateHeader title="apps" elements={apps} />
-            <NavigateHeader title="charts" elements={charts} />
             <NavigateHeader title="charts" elements={charts} />
           </div>
         </nav>
