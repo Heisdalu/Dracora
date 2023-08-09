@@ -37,14 +37,14 @@ const HomePageContainer: React.FC<HomePageContainerProps> = ({ children }) => {
   }, []);
 
   return (
-    <>
+    <div className="md:flex">
       {ctx.activeModal && <NavigateModal toggle={ctx.toggleModal} />}
       <Container>
         <Header toggle={ctx.toggleModal} />
 
         <div>{children}</div>
       </Container>
-    </>
+    </div>
   );
 };
 export default HomePageContainer;

@@ -16,7 +16,7 @@ const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
 
   return (
     <>
-      <div className="navigateModal bg-white shadow-m1 max-w-[250px] border-1 w-[100%] fixed top-[0] z-[3] overflow-scroll h-[100vh] overflow-x-hidden md:sticky">
+      <div className="navigateModal bg-white shadow-m1 max-w-[250px] w-[100%] fixed top-[0] z-[3] overflow-scroll h-[100vh] overflow-x-hidden md:sticky">
         <nav className=" flex flex-col p-[1rem] relative bg-white">
           <div className="flex">
             <h1 className="flex items-center space-x-[12px]">
@@ -35,7 +35,7 @@ const NavigateModal: React.FC<NavigateModalProps> = ({ toggle }) => {
               onClick={toggleModal}
               className="ml-[auto] flex items-center justify-center md:hidden"
             >
-              <Image src="/navIcon/exit.svg" width={20} height={20} alt="" />
+              <Image src="/exit.svg" width={20} height={20} alt="" />
             </span>
           </div>
 
