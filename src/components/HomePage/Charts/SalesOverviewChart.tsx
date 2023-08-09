@@ -58,7 +58,7 @@ const SalesOverviewChart: FC<Props> = ({active}) => {
     responsive: true,
     elements: {
       point: {
-        pointBorderWidth: 10,
+        pointBorderWidth: 7,
       },
     },
     plugins: {
