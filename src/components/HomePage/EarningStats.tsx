@@ -4,7 +4,7 @@ import React from "react";
 const EarningStats: React.FC = () => {
   return (
     <>
-      <section className="border-1 flex flex-col space-y-1.5 p-0.75 lg:grid lg:[grid-template-columns:_1fr_2fr] lg:space-y-[0] [grid-gap:2rem]">
+      <section className="flex flex-col space-y-1.5 p-0.75 lg:grid lg:[grid-template-columns:_1fr_2fr] lg:space-y-[0] [grid-gap:2rem]">
         <div className="bg-white w-100 rounded-[12px] flex flex-col space-y-[1.5rem] p-[1.5rem] md:p-2 vlg:p-1">
           <div className="flex">
             <div>

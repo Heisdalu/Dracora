@@ -16,20 +16,20 @@ export default function Home() {
   const { activeModal } = useContext(Context);
 
   return (
-    <div className="border-1 border-red md:flex">
+    <div className="md:flex">
       <HomePageContainer>
         <main>
           <EarningStats />
           <RevenueStats active={activeModal} />
           <section
-            className={`border-1 flex flex-col space-y-[2.5rem] my-[1.5rem] vlg:grid ${
+            className={`flex flex-col space-y-[2.5rem] my-[1.5rem] vlg:grid ${
               activeModal
                 ? ""
                 : "vlg:[grid-template-columns:1fr_2fr] vlg:space-y-[0] vlg:[grid-gap:2.5rem]"
             }`}
           >
             <div
-              className={`rounded-[16px] p-1 bg-white border-1 space-y-[2rem] s4m:max-w-[450px] s4m:w-100 s4m:mx-auto ${
+              className={`rounded-[16px] p-1 bg-white space-y-[2rem] s4m:max-w-[450px] s4m:w-100 s4m:mx-auto ${
                 activeModal ? "" : "vlg:max-w-[none]"
               }`}
             >
@@ -58,15 +58,15 @@ export default function Home() {
             </div>
 
             <div
-              className={`border-1 rounded-[16px] p-1 bg-white space-y-1 md:max-w-[450px] md:w-100 md:mx-auto ${
-                activeModal ? "vlg:max-w-[800px]" : "vlg:max-w-[none] vlg:mx-[0]"
+              className={`rounded-[16px] p-1 bg-white space-y-1 md:max-w-[450px] md:w-100 md:mx-auto ${
+                activeModal ? "vlg:max-w-[800px]" : " vlg:max-w-[none] vlg:mx-[0]"
               }`}
             >
               <div className="flex items-center">
-                <h1 className="mr-1 border-1 break-words font-[600] text-black text-20px">
+                <h1 className="mr-1 break-words font-[600] text-black text-20px">
                   Sales Overview
                 </h1>
-                <div className="rounded-[6px] border-1 ml-auto p-[9px] centerPos border-[#0000001a]">
+                <div className="rounded-[6px] ml-auto p-[9px] centerPos border-[#0000001a]">
                   <select name="date" id="date" className="outline-none">
                     <option value="May 2021">May 2021</option>
                     <option value="May 2021">Jun 2021</option>
@@ -74,7 +74,7 @@ export default function Home() {
                   </select>
                 </div>
               </div>
-              <div className={`border-1 border-red`}>
+              <div>
                 <SalesOverviewChart active={activeModal} />
               </div>
             </div>
@@ -82,9 +82,9 @@ export default function Home() {
 
           {/* fourth part */}
           <section
-            className={`mt-[2rem] space-y-1.5 s4m:max-w-[400px] s4m:mx-auto s4m:w-100 vlg:max-w-[none] vlg:mx-[0] vlg:grid vlg:grid-cols-3 vlg:[grid-gap:2rem] vlg:space-y-[0]`}
+            className={`mt-[3rem] space-y-1.5 s4m:max-w-[400px] s4m:mx-auto s4m:w-100 vlg:max-w-[none] vlg:mx-[0] vlg:grid vlg:grid-cols-3 vlg:[grid-gap:2rem] vlg:space-y-[0]`}
           >
-            <div className="border-1 p-1 space-y-[2.5rem] bg-white rounded-[16px]">
+            <div className="p-1 space-y-[2.5rem] bg-white rounded-[16px]">
               <div className="flex">
                 <h1 className="text-20px font-[600] text-black">
                   Weekly Stats
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-1 space-y-[1.5rem] border-1 bg-white rounded-[16px]">
+            <div className="p-1 space-y-[1.5rem] bg-white rounded-[16px]">
               <div className="flex">
                 <h1 className="text-20px font-[600] text-black">
                   MedicalPro Branding
@@ -147,7 +147,7 @@ export default function Home() {
               </div>
               <div className="border-b-[1px] border-r-lgBlack pb-1">
                 <h1>Teams</h1>
-                <div className="border-1 flex space-x-1">
+                <div className="flex space-x-1">
                   <p className="px-0.75 py-[1px] rounded-[8px] bg-[#FFA500] text-white text-14px font-[400]">
                     Bootstrap
                   </p>
@@ -157,9 +157,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="border-1 space-y-[8px] pb-0.5">
+              <div className="space-y-[8px] pb-0.5">
                 <h1 className="text-16px font-[600] text-black">Leaders</h1>
-                <div className="border-1 flex space-x-1">
+                <div className="flex space-x-1">
                   {LeaderIcons.map((el, i) => (
                     <span key={i}>
                       <Image src={el.path} width={32} height={32} alt="" />
@@ -178,7 +178,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white border-1 p-1 flex flex-col space-y-[1.5rem] rounded-[16px]">
+            <div className="bg-white p-1 flex flex-col space-y-[1.5rem] rounded-[16px]">
               <div className="flex">
                 <h1 className="text-20px font-[600] text-black">
                   Daily Activities
@@ -199,7 +199,7 @@ export default function Home() {
               </span>
 
               <div>
-                <div className="border-1 space-y-[1px]">
+                <div className="space-y-[1px]">
                   <h1 className="text-18px font-[600] text-black">
                     React 18 coming soon!
                   </h1>

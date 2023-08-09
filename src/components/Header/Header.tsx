@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ toggle }) => {
   };
 
   return (
-    <div className="bg-mainBg border-1 py-[8px] sticky top-[0rem] mb-[2rem] md:relative md:top[0] md:mt-1 md:py-[0]">
+    <div className="bg-mainBg py-[8px] sticky top-[0rem] mb-[2rem] md:relative md:top[0] md:mt-1 md:py-[0]">
       <header>
         <nav className="flex">
           <button

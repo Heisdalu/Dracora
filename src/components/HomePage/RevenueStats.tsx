@@ -11,7 +11,7 @@ interface Props {
 const RevenueStats: React.FC<Props> = ({ active }) => {
   return (
     <section
-      className={`border-1 mt-0.75 flex flex-col space-y-[3.25rem] vlg:grid vlg:[grid-template-columns:2fr_1fr] vlg:space-y-[0] ${
+      className={`mt-0.75 flex flex-col space-y-[3.25rem] vlg:grid vlg:[grid-template-columns:2fr_1fr] vlg:space-y-[0] ${
         active ? "vlg:space-x-[3.25rem]" : "vlg:space-x-[0]"
       }`}
     >
