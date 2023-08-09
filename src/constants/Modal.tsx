@@ -12,7 +12,7 @@ import {
   PieIcon,
   BubbleIcon,
   ScatterIcon,
-} from "@/components/NavigateIcon";
+} from "@/components/Modal/NavigateModal/NavigateIcon";
 
 export const dashboard = [{ icon: <EcommerceIcon />, name: "ecommerce" }];
 
