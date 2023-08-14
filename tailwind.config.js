@@ -43,7 +43,8 @@ module.exports = {
         "14px": "0.875rem",
         "24px": "1.5rem",
         "18px": "1.125rem",
-        '12px': '0.75rem'
+        "12px": "0.75rem",
+        "13px": "0.8125rem",
       },
       colors: {
         navModalHeader: "#9CA3AF",
@@ -60,6 +61,10 @@ module.exports = {
         pink: "#FFF4E5",
         lgBlack: "#0000001a",
         orange: "#FB923C",
+        orblack: "#000000de",
+        dgPink: "#E3165B",
+        dggray: "#E0E0E0",
+        dgBlack: "#0000008a",
       },
       boxShadow: {
         m1: "box-shadow: 0px 7px 30px 0px rgba(114, 122, 131, 0.11)",
