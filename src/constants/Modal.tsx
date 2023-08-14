@@ -44,14 +44,14 @@ export enum DataConstant {
 
 export interface stateTypes {
   activeModal: boolean;
-  isMobileScreen: boolean;
+  isDesktopScreen: boolean;
   isMobileFunc: Function;
   toggleModal: Function;
 }
 
 export const initial: stateTypes = {
   activeModal: false,
-  isMobileScreen: false,
+  isDesktopScreen: false,
   isMobileFunc: () => {},
   toggleModal: () => {},
 };

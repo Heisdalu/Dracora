@@ -15,8 +15,8 @@ const NavigateHeader: React.FC<NavigateHeaderProps> = ({ title, elements }) => {
   const ctx = useContext(Context);
 
   const btnFunc = () => {
-    if (!ctx.isMobileScreen) {
-      ctx.toggleModal()
+    if (!ctx.isDesktopScreen) {
+      ctx.toggleModal();
     }
   };
   return (

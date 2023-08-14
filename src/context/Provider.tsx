@@ -22,7 +22,7 @@ const dataReducer = (state: stateTypes, action: actionTypes) => {
   if (action.type === DataConstant.CHECK_SCREEN) {
     return {
       ...state,
-      isMobileScreen: true,
+      isDesktopScreen: true,
     };
   }
 
@@ -33,7 +33,7 @@ const Provider = ({ children }: Props) => {
   const [dataState, dispatch] = useReducer(dataReducer, initial);
 
   const toggleModalState = (state = false) => {
-    console.log(state);
+    // console.log(state);
     dispatch({ type: DataConstant.MODAL, state: state });
   };
 
