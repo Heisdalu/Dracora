@@ -24,7 +24,7 @@ interface Props {
   active: boolean;
 }
 
-const SalesOverviewChart: FC<Props> = ({active}) => {
+const SalesOverviewChart: FC<Props> = ({ active }) => {
   const labels = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
 
   const data = {
@@ -90,7 +90,7 @@ const SalesOverviewChart: FC<Props> = ({active}) => {
     },
   };
   return (
-    <div className={`${active ? '' : 'vlg:mt-[4rem]'}`}>
+    <div className={`${active ? "" : "vlg:mt-[4rem]"}`}>
       <Line options={options} data={data} />
     </div>
   );

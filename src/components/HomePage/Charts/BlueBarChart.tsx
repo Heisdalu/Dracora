@@ -56,14 +56,14 @@ const BlueBarChart: FC = () => {
         label: "Revenue",
         data: [9000, 23459, 29678, 11400, 31500],
         backgroundColor: "#fff",
-        hoverBackgroundColor: '#fff'
+        hoverBackgroundColor: "#fff",
       },
     ],
   };
 
   return (
     <div>
-      <Bar options={options} data={data} />;
+      <Bar options={options} data={data} />
     </div>
   );
 };

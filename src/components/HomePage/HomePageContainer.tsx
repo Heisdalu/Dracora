@@ -34,6 +34,11 @@ const HomePageContainer: React.FC<HomePageContainerProps> = ({ children }) => {
         <Header toggle={ctx.toggleModal} />
 
         <div>{children}</div>
+        <div className="text-center my-2 mt-[4rem]">
+          <p className="font-[400] text-navModalText text-16px">
+            © {new Date().getFullYear()} All rights reserved by Dracora.com
+          </p>
+        </div>
       </Container>
     </div>
   );
