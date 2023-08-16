@@ -28,7 +28,9 @@ const Orders: FC<OrderProps> = ({ mock }) => {
   return (
     <HomePageContainer>
       <div
-        className={`py-1 px-0.5 flex flex-col ${activeModal ? '' : 'vlg:max-w-[1100px] mx-auto'}`}
+        className={`py-1 pt-[0] px-0.5 flex flex-col ${
+          activeModal ? "" : "vlg:max-w-[1100px] mx-auto"
+        }`}
       >
         <h1 className="text-[#0F172A] text-[1.875rem] font-[600]">Orders</h1>
 
@@ -69,19 +71,14 @@ const Orders: FC<OrderProps> = ({ mock }) => {
                   className="py-1 border-t-[1px] border-dggray grid [grid-template-columns:1fr_1fr_1fr_1fr_1fr_1fr_1fr] [grid-gap:1rem] place-items-center"
                 >
                   <td>
-                    <div className="h-[70px] w-[auto] flex items-center">
+                    <div className="h-[70px] w-[auto] flex items-center pl-[10px]">
                       <Image
-                        src={el.images}
-                        width={0}
-                        height={0}
-                        placeholder="blur"
-                        blurDataURL="/product.jpg"
+                        src={`https://picsum.photos/id/${el.id + 10}/70/80`}
+                        width={70}
+                        height={80}
                         style={{
-                          height: "auto",
-                          width: "100%",
                           borderRadius: "12px",
                         }}
-                        sizes="100vw"
                         alt=""
                       />
                     </div>
