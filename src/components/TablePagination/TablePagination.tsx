@@ -81,7 +81,7 @@ const TablePagination: FC<TablePaginationProps> = ({
 
   const moveToValue = (value: number) => {
     scrollToTop();
-    setStartPoint(value)
+    setStartPoint(value);
   };
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const TablePagination: FC<TablePaginationProps> = ({
   }, [startPoint]);
 
   return (
-    <div className="flex space-x-1">
+    <div className="flex space-x-1 md:justify-center lg:justify-normal">
       <button
         className="border-1 px-0.5 disabled:opacity-[0.5]"
         onClick={moveBackwardEnd}
@@ -109,21 +109,20 @@ const TablePagination: FC<TablePaginationProps> = ({
         <Back />
       </button>
       <div className="flex space-x-1">
-        {isDesktopScreen ? (
-          listData.map((el, i) => (
-            <button
-              key={i}
-              onClick={moveToValue.bind(null, el)}
-              className={`h-[26px] w-[26px] text-center rounded-[50%] ${
-                startPoint === el ? "bg-dgPink text-white" : ""
-              }`}
-            >
-              {el.toString()}
-            </button>
-          ))
-        ) : (
-          <span className="text-center">{`${startPoint} of ${countOfElementDisplay} pages`}</span>
-        )}
+        {listData.map((el, i) => (
+          <button
+            key={i}
+            onClick={moveToValue.bind(null, el)}
+            className={`hidden lg:block h-[26px] w-[26px] text-center rounded-[50%] ${
+              startPoint === el ? "bg-dgPink text-white" : ""
+            }`}
+          >
+            {el.toString()}
+          </button>
+        ))}
+        {
+          <span className="text-center lg:hidden">{`${startPoint} of ${countOfElementDisplay} pages`}</span>
+        }
       </div>
       <button
         className="border-1 px-0.5 disabled:opacity-[0.5]"
@@ -139,6 +138,9 @@ const TablePagination: FC<TablePaginationProps> = ({
       >
         <ForwardIcon />
       </button>
+      {
+        <span className="hidden vlg:block w-100 text-right pr-1">{`${startPoint} of ${countOfElementDisplay} pages`}</span>
+      }
     </div>
   );
 };
