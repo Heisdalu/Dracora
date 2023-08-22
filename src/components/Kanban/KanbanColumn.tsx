@@ -30,7 +30,7 @@ const KanbanColumn: FC<KanbanColumnProps> = ({
           >
             {/* show empty message for empty cards */}
             {message.length === 0 && (
-              <div className="border-1 text-14px font-[400] text-black">
+              <div className="text-14px font-[400] text-black">
                 No Task to Display
               </div>
             )}

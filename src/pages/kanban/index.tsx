@@ -1,12 +1,14 @@
 import HomePageContainer from "@/components/HomePage/HomePageContainer";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, useContext } from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import KanbanColumn from "@/components/Kanban/KanbanColumn";
 import { kanbanData } from "@/data/kanbanData";
+import Context from "@/context/Context";
 
 const Kanban: FC = () => {
   const [data, setData] = useState(kanbanData);
   const [ready, setReady] = useState(false);
+  const { activeModal } = useContext(Context);
 
   const handleDragEnd = (results: DropResult) => {
     const { destination, source } = results;
@@ -60,7 +62,13 @@ const Kanban: FC = () => {
     <HomePageContainer>
       {ready && (
         <DragDropContext onDragEnd={handleDragEnd}>
-          <div className="rounded-[24px] verflow-x-scroll overflow-y-hidden w-100 md:max-w-[450px] lg:max-w-[700px] vlg:max-w-[1000px] p-1 pr-[0] space-y-[1.5rem] bg-white">
+          <div
+            className={`rounded-[24px] verflow-x-scroll overflow-y-hidden w-100 ${
+              activeModal
+                ? "md:max-w-[450px] lg:max-w-[700px] vlg:max-w-[1000px]"
+                : "md:pr-0.5"
+            } p-1 pr-[0] space-y-[1.5rem] bg-white`}
+          >
             <h1 className="text-otherHeader text-30px font-[800]">Kanban</h1>
             <div className="w-100 overflow-x-scroll container py-1 pr-1 md:pl-0.5  flex space-x-[0.625rem]">
               {data.map((el) => (
