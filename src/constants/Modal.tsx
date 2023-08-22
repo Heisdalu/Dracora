@@ -5,7 +5,6 @@ import {
   EmployeeIcon,
   KanbanIcon,
   EditorIcon,
-  ColorPickerIcon,
   LineIcon,
   AreaIcon,
   BarIcon,
@@ -25,7 +24,6 @@ export const pages = [
 export const apps = [
   { icon: <KanbanIcon />, name: "kanban" },
   { icon: <EditorIcon />, name: "editor" },
-  { icon: <ColorPickerIcon />, name: "color-Picker" },
 ];
 
 export const charts = [
