@@ -1,20 +1,10 @@
 import React, { FC, useEffect, useState } from "react";
 import HomePageContainer from "@/components/HomePage/HomePageContainer";
-import dynamic from "next/dynamic";
-
-const EditorComponent = dynamic(
-  () => import("../../components/Editor/Editor.jsx"),
-  {
-    loading: () => <p>sjjsjsjsjsjs</p>,
-  }
-);
+import EditorComponent from "../../components/Editor/Editor.jsx";
 
 const Editor: FC = () => {
   const [ready, setReady] = useState(false);
-  const broswerIs = typeof window !== "undefined";
-
-  console.log(broswerIs);
-
+  
   useEffect(() => {
     setReady(true);
   }, []);

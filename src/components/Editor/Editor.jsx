@@ -18,7 +18,7 @@ In a nutshell, Next.js isn't just a framework; it's a game-changer. Its ability 
 
 
 const Editor = () => {
-  console.log(typeof window !== "undefined");
+ 
   return (
     <div>
       <ReactQuill theme="snow" value={dummyText} className="ql-editor" />
