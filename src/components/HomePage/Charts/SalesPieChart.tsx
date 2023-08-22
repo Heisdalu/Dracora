@@ -32,7 +32,11 @@ const SalesPieChart: FC = () => {
   };
   return (
     <div className="w-[100%] max-w-[120px] ml-auto md:max-w-[150px]">
-      <Doughnut data={data} options={options} />
+      <Doughnut
+        data={data}
+        options={options}
+        className="w-[100%] max-w-[120px] md:max-w-[150px]"
+      />
     </div>
   );
 };
