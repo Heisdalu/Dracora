@@ -42,4 +42,10 @@
     right: 10px;
     background-color: #fec90f;
   }
+
+  .ql-editor p {
+    font-size: 1rem;
+    font-family: "Inter";
+    background-color: white;
+  }
 }
