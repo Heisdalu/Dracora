@@ -69,6 +69,9 @@ const Area: FC = () => {
       legend: {
         position: "bottom" as const,
       },
+      datalabels: {
+        display: false,
+      },
     },
 
     interaction: {

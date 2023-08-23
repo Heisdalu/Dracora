@@ -62,6 +62,9 @@ const Bar: FC = () => {
         display: true,
         position: "bottom",
       },
+      datalabels: {
+        display: false,
+      },
     },
     scales: {
       x: {
