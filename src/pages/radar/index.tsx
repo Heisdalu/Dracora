@@ -42,6 +42,9 @@ const RadarChart = () => {
       legend: {
         position: "bottom" as const,
       },
+      datalabels: {
+        display: false,
+      },
     },
     interaction: {
       intersect: false,

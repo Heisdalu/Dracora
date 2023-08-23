@@ -51,6 +51,9 @@ const BubbleChart: FC = () => {
         display: true,
         position: "bottom",
       },
+      datalabels: {
+        display: false,
+      },
     },
   };
 
