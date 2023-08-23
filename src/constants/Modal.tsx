@@ -32,7 +32,7 @@ export const charts = [
   { icon: <BarIcon />, name: "bar" },
   { icon: <PieIcon />, name: "pie" },
   { icon: <BubbleIcon />, name: "bubble" },
-  { icon: <ScatterIcon />, name: "scatter" },
+  { icon: <ScatterIcon />, name: "radar" },
 ];
 
 export enum DataConstant {
