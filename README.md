@@ -1,6 +1,6 @@
 # Dracora
 
-Dracora is data Visualization app with drag and drop functionality, an editor app, line, bar and other fun charts.
+Dracora is data Visualization app with pagination, drag and drop functionality, an editor app, line, bar and other fun charts.
 
 ## Table of contents
 
