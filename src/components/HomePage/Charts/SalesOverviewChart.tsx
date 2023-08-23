@@ -66,6 +66,9 @@ const SalesOverviewChart: FC<Props> = ({ active }) => {
         display: true,
         position: "bottom",
       },
+      datalabels: {
+        display: false,
+      },
     },
     scales: {
       x: {

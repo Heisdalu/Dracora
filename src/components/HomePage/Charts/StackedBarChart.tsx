@@ -17,6 +17,9 @@ const StackedBarChart = () => {
       legend: {
         position: "bottom" as const,
       },
+      datalabels: {
+        display: false,
+      },
     },
     responsive: true,
     scales: {

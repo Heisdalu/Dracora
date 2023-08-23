@@ -47,6 +47,9 @@ const BudgetChart: FC<BudgetChartProps> = ({ dataArr, color }) => {
       legend: {
         display: false,
       },
+      datalabels: {
+        display: false,
+      },
     },
 
     scales: {

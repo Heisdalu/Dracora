@@ -29,6 +29,9 @@ const BlueBarChart: FC = () => {
       legend: {
         display: false,
       },
+      datalabels: {
+        display: false,
+      },
     },
     scales: {
       x: {

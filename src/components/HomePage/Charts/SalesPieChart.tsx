@@ -11,6 +11,9 @@ const SalesPieChart: FC = () => {
       legend: {
         display: false,
       },
+      datalabels: {
+        display: false,
+      },
     },
   };
 
