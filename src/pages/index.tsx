@@ -37,7 +37,7 @@ export default function Home() {
                 Recent Transactions
               </h1>
               <div className="rounded-[6px] border-1 ml-auto p-[9px] centerPos border-[#0000001a]">
-                <select name="date" id="date" className="outline-none">
+                <select name="date" id="date" className="outline-none bg-white">
                   <option value="May 2021">May 2021</option>
                   <option value="May 2021">Jun 2021</option>
                   <option value="May 2021">Aug 2021</option>
@@ -66,7 +66,7 @@ export default function Home() {
                 Sales Overview
               </h1>
               <div className="rounded-[6px] ml-auto p-[9px] border-1 centerPos border-[#0000001a]">
-                <select name="date" id="date" className="outline-none">
+                <select name="date" id="date" className="outline-none bg-white">
                   <option value="May 2021">May 2021</option>
                   <option value="May 2021">Jun 2021</option>
                   <option value="May 2021">Aug 2021</option>
