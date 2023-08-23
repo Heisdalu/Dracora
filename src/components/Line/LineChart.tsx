@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 
 import { Line } from "react-chartjs-2";
+import useWidth from "@/hook/useWidth";
 
 ChartJS.register(
   CategoryScale,
@@ -21,6 +22,8 @@ ChartJS.register(
 );
 
 const LineChart: FC = () => {
+  const { ready, isBigScreen } = useWidth();
+
   const labels = ["Jan", "Feb", "Mar", "Apr", "Jun"];
 
   const data = {
@@ -78,6 +81,14 @@ const LineChart: FC = () => {
       intersect: false,
     },
   };
-  return <Line options={options} data={data} />;
+  return (
+    ready && (
+      <Line
+        options={options}
+        data={data}
+        height={isBigScreen ? "auto" : "500px"}
+      />
+    )
+  );
 };
 export default LineChart;
