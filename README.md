@@ -32,6 +32,7 @@ Dracora is a data visualization program with drag-and-drop capabilities, paginat
 - React-quill
 - React-beautiful-dnd
 - Mobile-first workflow
+- Firebase
 
 ## Installation
 
