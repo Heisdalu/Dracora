@@ -28,18 +28,20 @@ const HomePageContainer: React.FC<HomePageContainerProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="md:flex">
-      {ctx.activeModal && <NavigateModal toggle={ctx.toggleModal} />}
-      <Container>
-        <Header toggle={ctx.toggleModal} />
+    <div className="bg-mainBg">
+      <div className="md:flex max-w-[1800px] w-100 mx-auto">
+        {ctx.activeModal && <NavigateModal toggle={ctx.toggleModal} />}
+        <Container>
+          <Header toggle={ctx.toggleModal} />
 
-        <div>{children}</div>
-        <div className="text-center my-2 mt-[4rem]">
-          <p className="font-[400] text-navModalText text-16px">
-            © {new Date().getFullYear()} All rights reserved by Dracora.com
-          </p>
-        </div>
-      </Container>
+          <div>{children}</div>
+          <div className="text-center my-2 mt-[4rem]">
+            <p className="font-[400] text-navModalText text-16px">
+              © {new Date().getFullYear()} All rights reserved by Dracora.com
+            </p>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
