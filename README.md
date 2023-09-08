@@ -1,6 +1,6 @@
 # Dracora
 
-Dracora is a data visualization program with drag-and-drop capabilities, pagination, a text editor, as well as line, bar, and other entertaining charts.
+Dracora is an admin dashboard with drag-and-drop capabilities, pagination, a text editor, as well as line, bar, and other entertaining charts.
 
 ## Table of contents
 
